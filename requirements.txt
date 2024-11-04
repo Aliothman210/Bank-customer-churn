@@ -1,6 +1,6 @@
 xgboost
-sickit-learn
+scikit-learn
 pickle
 numpy
 streamlit
-pip install --upgrade pip
+
