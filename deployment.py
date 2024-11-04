@@ -10,16 +10,15 @@ import base64
 
 models = {'logistic': pkl.load(open('logistic.pkl', 'rb')),
           'Ada': pkl.load(open('Ada.pkl', 'rb')),
-          
+          'Gradient': pkl.load(open('Gradient.pkl', 'rb')),
           'knn': pkl.load(open('knn.pkl', 'rb')),
           'svm': pkl.load(open('svm.pkl', 'rb')),
           
           'XG': pkl.load(open('XG.pkl', 'rb')),
           'decision_tree': pkl.load(open('decision_tree.pkl', 'rb')),
-          
-          'Random_forest': pkl.load(open('Random_forest.pkl', 'rb'))}
+          }
 
-models_names = ['logistic', 'Ada', 'knn', 'svm', 'XG', 'decision_tree',  'Random_forest']
+models_names = ['logistic', 'Ada', 'Gradient', 'knn', 'svm', 'XG', 'decision_tree']
 scaler = pkl.load(open('robustscaler.pkl', 'rb'))
 power = pkl.load(open('powertransformer.pkl', 'rb'))
 input_features = ['CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'HasCrCard','IsActiveMember', 'EstimatedSalary']
