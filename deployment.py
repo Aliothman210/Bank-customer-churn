@@ -66,7 +66,8 @@ def main():
     
     model_choice = st.selectbox("Choose Model", models_names)
     model = models[model_choice]
-
+    if not hasattr(model, "monotonic_cst"):
+    model.monotonic_cst = None      
     if st.button('Predict'):
         with st.spinner('Making prediction...'):
             time.sleep(0.8)
