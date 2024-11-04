@@ -8,20 +8,20 @@ import base64
 
 
 
-models = {'logistic': pkl.load(open('notebooks/logistic.pkl', 'rb')),
-          'Ada': pkl.load(open('notebooks/Ada.pkl', 'rb')),
-          'Gradient': pkl.load(open('notebooks\Gradient.pkl', 'rb')),
-          'knn': pkl.load(open('notebooks/knn.pkl', 'rb')),
-          'svm': pkl.load(open('notebooks/svm.pkl', 'rb')),
-          'stacking': pkl.load(open('notebooks/stacking.pkl', 'rb')),
-          'XG': pkl.load(open('notebooks/XG.pkl', 'rb')),
-          'decision_tree': pkl.load(open('notebooks/decision_tree.pkl', 'rb')),
-          'bagging_different': pkl.load(open('notebooks/bagging_different.pkl', 'rb')),
-          'Random_forest': pkl.load(open('notebooks/Random_forest.pkl', 'rb'))}
+models = {'logistic': pkl.load(open('logistic.pkl', 'rb')),
+          'Ada': pkl.load(open('Ada.pkl', 'rb')),
+          
+          'knn': pkl.load(open('knn.pkl', 'rb')),
+          'svm': pkl.load(open('/svm.pkl', 'rb')),
+          
+          'XG': pkl.load(open('XG.pkl', 'rb')),
+          'decision_tree': pkl.load(open('decision_tree.pkl', 'rb')),
+          
+          'Random_forest': pkl.load(open('Random_forest.pkl', 'rb'))}
 
-models_names = ['logistic', 'Ada', 'Gradient', 'knn', 'svm', 'stacking', 'XG', 'decision_tree', 'bagging_different', 'Random_forest']
-scaler = pkl.load(open('notebooks/robustscaler.pkl', 'rb'))
-power = pkl.load(open('notebooks/powertransformer.pkl', 'rb'))
+models_names = ['logistic', 'Ada', 'knn', 'svm', 'XG', 'decision_tree',  'Random_forest']
+scaler = pkl.load(open('robustscaler.pkl', 'rb'))
+power = pkl.load(open('powertransformer.pkl', 'rb'))
 input_features = ['CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'HasCrCard','IsActiveMember', 'EstimatedSalary']
 col1_features = ['CreditScore', 'Geography', 'Gender', 'Age', 'Tenure']
 col2_features = ['Balance','NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary']
@@ -33,7 +33,7 @@ Yes_no_features= ['HasCrCard', 'IsActiveMember']
 
 
 def load_encoder(feature):
-     return pkl.load(open(f'notebooks/{feature}.pkl', 'rb'))  
+     return pkl.load(open(f'{feature}.pkl', 'rb'))  
 def main():
     st.title(":bank: Bank Churn Prediction") 
     col1, col2 = st.columns(2)
