@@ -2,3 +2,4 @@ xgboost
 sickit-learn
 pickle
 numpy
+streamlit
