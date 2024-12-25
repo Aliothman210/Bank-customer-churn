@@ -11,7 +11,7 @@ models = {
     'logistic': pkl.load(open('logistic.pkl', 'rb')),
     'Ada': pkl.load(open('Ada.pkl', 'rb')),
     
-    'knn': pkl.load(open('knn.pkl', 'rb')),
+   
     'svm': pkl.load(open('svm.pkl', 'rb')),
     'XG': pkl.load(open('XG.pkl', 'rb')),
     'decision_tree': pkl.load(open('decision_tree.pkl', 'rb')),
