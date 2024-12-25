@@ -10,7 +10,7 @@ import base64
 models = {
     'logistic': pkl.load(open('logistic.pkl', 'rb')),
     'Ada': pkl.load(open('Ada.pkl', 'rb')),
-    'Gradient': pkl.load(open('Gradient.pkl', 'rb')),
+    
     'knn': pkl.load(open('knn.pkl', 'rb')),
     'svm': pkl.load(open('svm.pkl', 'rb')),
     'XG': pkl.load(open('XG.pkl', 'rb')),
